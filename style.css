@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+header {
+  background: #1e293b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.visualizer-container {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  height: calc(100vh - 60px);
+}
+
+.array-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.number-box {
+  background: #1e293b;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+}
+
+.number-box.compare {
+  background: #facc15;
+  color: #000;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  height: 20px;
+}
+
+.arrow {
+  width: 30px;
+  text-align: center;
+  visibility: hidden;
+}
+
+.arrow.active {
+  visibility: visible;
+  color: #facc15;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 20px;
+}
+
+.controls button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.code-area {
+  background: #1e293b;
+  padding: 1rem;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+code span {
+  display: block;
+  padding-left: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+code span.highlight {
+  background: rgba(34,197,94,0.3);
+  border-left: 4px solid #22c55e;
+}
+.input-section {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+#arrayInput {
+  padding: 5px;
+  width: 60%;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+}
+
+#setArrayBtn {
+  padding: 6px 10px;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.loop-vars {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: #94a3b8;
+}
