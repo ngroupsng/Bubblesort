@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Sort Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bubble Sort</h1>
+    <button class="back-btn" onclick="window.location.href='bubble-sort.html'">⬅ Back</button>
+  </header>
+
+  <main class="visualizer-container">
+    <section class="animation-area">
+      <div class="input-section">
+        <input type="text" id="arrayInput" placeholder="Enter numbers separated by commas (e.g. 5,3,8)">
+        <button id="setArrayBtn">Set Array</button>
+      </div>
+
+      <div class="array-container" id="array-container"></div>
+      <div class="arrow-container" id="arrow-container"></div>
+
+      <div class="loop-vars">
+        <span id="i-value">i = 0</span> | <span id="j-value">j = 0</span>
+      </div>
+
+      <div class="controls">
+        <button id="runBtn">▶ Run</button>
+        <button id="pauseBtn">⏸ Pause</button>
+        <button id="stepBtn">⏭ Next Step</button>
+        <label>Speed: <input type="range" id="speedSlider" min="200" max="2000" step="100" value="1000"></label>
+      </div>
+    </section>
+    <section class="code-area">
+      <pre><code id="code-block">
+<span data-line="1">function bubbleSort(arr) {</span>
+<span data-line="2">  for (let i = 0; i < arr.length - 1; i++) {</span>
+<span data-line="3">    for (let j = 0; j < arr.length - i - 1; j++) {</span>
+<span data-line="4">      if (arr[j] > arr[j+1]) {</span>
+<span data-line="5">        let temp = arr[j];</span>
+<span data-line="6">        arr[j] = arr[j+1];</span>
+<span data-line="7">        arr[j+1] = temp;</span>
+<span data-line="8">      }</span>
+<span data-line="9">    }</span>
+<span data-line="10">  }</span>
+<span data-line="11">  return arr;</span>
+<span data-line="12">}</span>
+      </code></pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
